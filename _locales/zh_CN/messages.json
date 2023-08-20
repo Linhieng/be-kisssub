@@ -1,0 +1,12 @@
+{
+    "search_string": {
+        "message": "kisssub%20工具",
+        "description": "① 支持将自定义的番组表保存在浏览器内存中，每次重新打开页面时无需重新获取。\n② 自动将种子下载的连接修改为 https 协议"
+    },
+    "pluginDesc": {
+        "message": "这是一个很简单的扩展程序，只为 kisssub.org 网站服务。目前只提供了以下几个功能：① 在主页面添加快捷按钮，可跳转到“编辑番组表” ② 在“编辑番组表”中提供了保存 textarea 文本内容到浏览器内容（localStorage）中，方便下次打开页面时不用重新输入文本信息。③ 在种子下载时，默认是 http 协议，该扩展将其修改为 https 协议。"
+    },
+    "name": {
+        "message": "kisssub 工具"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "name": "kisssub 工具",
+    "version": "1.0.0",
+    "manifest_version": 3,
+
+    "default_locale": "zh_CN",
+    "description": "① 支持将自定义的番组表保存在浏览器内存中，每次重新打开页面时无需重新获取。\n② 自动将种子下载的连接修改为 https 协议",
+    "icons": {
+        "16": "icons/kisssub16x16.ico",
+        "32": "icons/kisssub16x16.ico",
+        "48": "icons/kisssub16x16.ico",
+        "128": "icons/kisssub16x16.ico"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_title": "鼠标悬浮时会显示我"
+    },
+
+    "author": "Linehing",
+    "options_page": "options-page/options-page.html",
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://www.kisssub.org/",
+        "http://www.kisssub.org/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "https://www.kisssub.org/", "http://www.kisssub.org/" ],
+            "css": [ "css/kisssub.css" ],
+            "js": [ "content_scripts/kisssub-script.js" ]
+        },
+        {
+            "matches": [ "https://www.kisssub.org/*" ],
+            "js": [ "content_scripts/https-kisssub.js" ]
+        },
+        {
+            "matches": [ "https://www.kisssub.org/addon.php?r=bangumi/table&layout=frame", "http://www.kisssub.org/addon.php?r=bangumi/table&layout=frame" ],
+            "css": [ "css/kisssub.css" ],
+            "js": [ "content_scripts/load-local-cartoon.js" ]
+        }
+    ]
+}
