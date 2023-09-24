@@ -3,7 +3,7 @@ function http2https() {
     if (eleDownload) {
         eleDownload.setAttribute(
             'href',
-            eleDownload.href.replace(/^http:/, 'https:')
+            eleDownload.href.replace(/^http:/, 'https:'),
         )
     } else {
         setTimeout(() => {

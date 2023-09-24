@@ -4,10 +4,8 @@
             {
                 "match": "\\.scss$",
                 "cmd": "sass \"${file}\" > \"${fileDirname}\\${fileBasenameNoExt}.css\""
-            },
+            }
         ]
     },
-    "cSpell.words": [
-        "kisssub",
-    ]
+    "cSpell.words": ["kisssub"]
 }

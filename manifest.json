@@ -18,28 +18,25 @@
 
     "author": "Linehing",
     "options_page": "options-page/options-page.html",
-    "permissions": [
-        "tabs",
-        "storage"
-    ],
-    "host_permissions": [
-        "https://www.kisssub.org/",
-        "http://www.kisssub.org/"
-    ],
+    "permissions": ["tabs", "storage"],
+    "host_permissions": ["https://www.kisssub.org/", "http://www.kisssub.org/"],
     "content_scripts": [
         {
-            "matches": [ "https://www.kisssub.org/", "http://www.kisssub.org/" ],
-            "css": [ "css/kisssub.css" ],
-            "js": [ "content_scripts/kisssub-script.js" ]
+            "matches": ["https://www.kisssub.org/", "http://www.kisssub.org/"],
+            "css": ["css/kisssub.css"],
+            "js": ["content_scripts/kisssub-script.js"]
         },
         {
-            "matches": [ "https://www.kisssub.org/*" ],
-            "js": [ "content_scripts/https-kisssub.js" ]
+            "matches": ["https://www.kisssub.org/*"],
+            "js": ["content_scripts/https-kisssub.js"]
         },
         {
-            "matches": [ "https://www.kisssub.org/addon.php?r=bangumi/table&layout=frame", "http://www.kisssub.org/addon.php?r=bangumi/table&layout=frame" ],
-            "css": [ "css/kisssub.css" ],
-            "js": [ "content_scripts/load-local-cartoon.js" ]
+            "matches": [
+                "https://www.kisssub.org/addon.php?r=bangumi/table&layout=frame",
+                "http://www.kisssub.org/addon.php?r=bangumi/table&layout=frame"
+            ],
+            "css": ["css/kisssub.css"],
+            "js": ["content_scripts/load-local-cartoon.js"]
         }
     ]
 }

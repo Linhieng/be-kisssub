@@ -1,14 +1,14 @@
 #lin {
     position: fixed;
-    z-index : 99;
-    top     : 20px;
-    left    : 0;
+    z-index: 99;
+    top: 20px;
+    left: 0;
 
     box-sizing: border-box;
-    max-width : 100px;
-    height    : 100%;
-    padding   : 4px;
-    overflow  : auto;
+    max-width: 100px;
+    height: 100%;
+    padding: 4px;
+    overflow: auto;
 
     li {
         list-style: none;
@@ -18,8 +18,8 @@
         padding: 0;
     }
 
-    &>ul {
-        display  : flex;
+    & > ul {
+        display: flex;
         flex-flow: row, nowrap;
     }
 }
